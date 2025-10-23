@@ -6,13 +6,13 @@ El propósito principal es la aplicación de los conceptos de Programación Orie
 
 Objetivos del Proyecto
 Desarrollar un sistema funcional de boletos aéreos y que permita:
-❖	Simular la compra y reservación de tiquetes aéreos.
+Simular la compra y reservación de tiquetes aéreos.
 
-❖	Verificar la disponibilidad de asientos según clase (Económica o Ejecutiva).
+Verificar la disponibilidad de asientos según clase (Económica o Ejecutiva).
 
-❖	Generar automáticamente el Ticket y la Factura del pasajero.
+Generar automáticamente el Ticket y la Factura del pasajero.
 
-❖	Aplicar conceptos de encapsulamiento, composición y métodos de negocio en Java.
+Aplicar conceptos de encapsulamiento, composición y métodos de negocio en Java.
 
 Estructura del Proyecto
 Este proyecto usa programación orientada a objetos y tiene un paquete domain con las siguientes clases principales:
@@ -38,20 +38,20 @@ Cómo Ejecutar el Proyecto
 https://github.com/Johnny-707/Project.git
 
 2.	Abrir el proyecto en NetBeans
-●	Archivo
+Archivo.
 
-●	Abrir Proyecto 
+Abrir Proyecto.
 
-●	Selecciona la carpeta del repositorio.
+Selecciona la carpeta del repositorio.
 
 4.	Compilar y ejecutar
 Ejecuta la clase principal: Progra_project.Progra_project.java
 5.	Interacción del sistema
 Al ejecutar, aparecerá un menú con las siguientes opciones:
-●	Verify Availability: Verifica asientos disponibles por clase.
-●	Make Reservation: Permite registrar los datos del pasajero y reservar.
-●	Show Flights Status: Muestra el estado y ocupación de todos los vuelos.
-●	Exit: Cierra el programa.
+Verify Availability: Verifica asientos disponibles por clase.
+Make Reservation: Permite registrar los datos del pasajero y reservar.
+Show Flights Status: Muestra el estado y ocupación de todos los vuelos.
+Exit: Cierra el programa.
 
 Principios de POO aplicados
 Encapsulamiento: Cada clase gestiona sus propios atributos mediante getters/setters.
@@ -61,7 +61,7 @@ Modularidad: Código organizado por paquetes y responsabilidades claras.
 
 Control de Versiones (Git)
 El proyecto se gestiona con GitHub e incluye:
-●	Múltiples commits con mensajes descriptivos.
-●	Estructura organizada en carpetas (domain/ y Progra_project/).
-●	Este archivo README.md que explica propósito y ejecución.
+Múltiples commits con mensajes descriptivos.
+Estructura organizada en carpetas (domain/ y Progra_project/).
+Este archivo README.md que explica propósito y ejecución.
 
