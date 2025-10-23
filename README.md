@@ -38,12 +38,15 @@ Cómo Ejecutar el Proyecto
 https://github.com/Johnny-707/Project.git
 
 2.	Abrir el proyecto en NetBeans
-●	Archivo 
+●	Archivo
+
 ●	Abrir Proyecto 
+
 ●	Selecciona la carpeta del repositorio.
-3.	Compilar y ejecutar
+
+4.	Compilar y ejecutar
 Ejecuta la clase principal: Progra_project.Progra_project.java
-4.	Interacción del sistema
+5.	Interacción del sistema
 Al ejecutar, aparecerá un menú con las siguientes opciones:
 ●	Verify Availability: Verifica asientos disponibles por clase.
 ●	Make Reservation: Permite registrar los datos del pasajero y reservar.
