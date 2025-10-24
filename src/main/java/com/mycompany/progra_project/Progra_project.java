@@ -10,19 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author luzma
- */
+
 public class Progra_project {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
-        Airplane plane1 = new Airplane("BASIC-100", 2, 2); // 2 business, 2 economy
-        Flight f1 = new Flight("New York", "Brazil", plane1, 120.0, 1.7,"01-11-2025", "14:00"); // economy price = 120, Business = 120*1.7
+        
+        Airplane plane1 = new Airplane("BASIC-100", 2, 2); 
+        Flight f1 = new Flight("New York", "Brazil", plane1, 120.0, 1.7,"01-11-2025", "14:00"); 
 
         Airplane plane2 = new Airplane("BASIC-200", 2, 2);
         Flight f2 = new Flight("Costa Rica", "Panama", plane2, 110.0, 1.6, "15-11-2025", "08:00");
@@ -51,7 +46,7 @@ public class Progra_project {
                     JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
                     null, options, options[0]);
 
-            if (choice == 0) { // Verify availability
+            if (choice == 0) { 
                 Flight flight = selectFlight(flights);
                 if (flight == null) continue;
                 Airplane.SeatClass seatClass = selectClass();
@@ -64,7 +59,7 @@ public class Progra_project {
              } else {
               JOptionPane.showMessageDialog(null, flight.getRoute() + "\nNo seats available for " + seatClass, "Availability", JOptionPane.INFORMATION_MESSAGE);
             }
-            } else if (choice == 1) { // Make reservation
+            } else if (choice == 1) { 
                 Flight flight = selectFlight(flights);
                 if (flight == null)
                     continue;
@@ -95,7 +90,7 @@ public class Progra_project {
                 Passenger p = new Passenger(name.trim(), id.trim(), email.trim(), phone.trim());
                 Reservation res = new Reservation(flight, p, seatClass);
 
-                // Verify availability before reserving (requirement)
+                
                 if (!flight.checkAvailability(seatClass)) {
                     JOptionPane.showMessageDialog(null, "No availability for selected class.", "Error", JOptionPane.ERROR_MESSAGE);
                     continue;
@@ -107,19 +102,19 @@ public class Progra_project {
                     continue;
                 }
 
-                // Show ticket and invoice
+                
                 Ticket t = res.getTicket();
                 Invoice inv = res.getInvoice();
                 String out = "=== Ticket ===\n" + t.toString() + "\n\n=== Invoice ===\n" + inv.toString();
                 JOptionPane.showMessageDialog(null, out, "Reservation Success", JOptionPane.INFORMATION_MESSAGE);
 
-            } else if (choice == 2) { // Show flights status
+            } else if (choice == 2) { 
                 StringBuilder sb = new StringBuilder();
                 for (Flight fl : flights) {
                     sb.append(fl.toString()).append("\n");
                 }
                 JOptionPane.showMessageDialog(null, sb.toString(), "Flights Status", JOptionPane.INFORMATION_MESSAGE);
-            } else { // Exit or closed dialog
+            } else { 
                 break;
             }
         }
