@@ -1,30 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package domain;
 
-/**
- *
- * @author luzma
- */
 public class Flight {
-  private String origin;
-  private String destination;
-  private Airplane airplane;
-  private double basePriceEconomy; 
-  private double businessMultiplier; 
-  private String date;
-  private String boardingTime;
-    
-  public Flight(String origin, String destination, Airplane airplane, double basePriceEconomy, double businessMultiplier, String date, String boardingTime) {
-    this.origin = origin;
-    this.destination = destination;
-    this.airplane = airplane;
-    this.basePriceEconomy = basePriceEconomy;
-    this.businessMultiplier = businessMultiplier;
-    this.date = date;
-    this.boardingTime = boardingTime;
+    private String origin;
+    private String destination;
+    private Airplane airplane;
+    private double basePriceEconomy; // base price for economy
+    private double businessMultiplier; // multiplier for business
+    private String date;
+    private String boardingTime;
+
+    public Flight(String origin, String destination, Airplane airplane, double basePriceEconomy, double businessMultiplier, String date, String boardingTime) {
+        this.origin = origin;
+        this.destination = destination;
+        this.airplane = airplane;
+        this.basePriceEconomy = basePriceEconomy;
+        this.businessMultiplier = businessMultiplier;
+        this.date = date;
+        this.boardingTime = boardingTime;
     }
 
     public String getOrigin() {
@@ -58,6 +50,7 @@ public class Flight {
     public void setBusinessMultiplier(double businessMultiplier) {
         this.businessMultiplier = businessMultiplier;
     }
+
     public String getDate() {
         return date;
     }
@@ -70,7 +63,7 @@ public class Flight {
         return boardingTime;
     }
 
-    public void setTime(String boardingTime) {
+    public void setBoardingTime(String boardingTime) {
         this.boardingTime = boardingTime;
     }
 
@@ -83,19 +76,22 @@ public class Flight {
     }
 
     public String getRoute() {
-        return origin + " -> " + destination + " -> " + date + " -> " + boardingTime;
+        return origin + " -> " + destination + " (" + date + " " + boardingTime + ")";
     }
 
     public double calculatePrice(Airplane.SeatClass seatClass) {
-        if (seatClass == Airplane.SeatClass.ECONOMY) return basePriceEconomy;
-        else return basePriceEconomy * businessMultiplier;
+        if (seatClass == Airplane.SeatClass.ECONOMY)
+            return basePriceEconomy;
+        else
+            return basePriceEconomy * businessMultiplier;
     }
 
     public Airplane getAirplane() { 
-        return airplane; }
+        return airplane; 
+    }
 
     @Override
     public String toString() {
         return getRoute() + " | " + airplane.toString();
-    }    
+    }
 }
