@@ -9,7 +9,7 @@ package domain;
  * @author dylan
  */
 public class Passenger {
-    private String fullName;
+      private String fullName;
     private String idNumber;
     private String email;
     private String phoneNumber;
