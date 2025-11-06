@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -24,6 +25,29 @@ public class Airplane {
       capacity.put(SeatClass.ECONOMY, ecoCapacity);
       booked.put(SeatClass.BUSINESS, 0);
       booked.put(SeatClass.ECONOMY, 0);
+=======
+package domain;
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class Airplane {
+   private String model;
+    private Map<SeatClass, Integer> capacity;
+    private Map<SeatClass, Integer> booked;
+
+    public enum SeatClass { BUSINESS, ECONOMY }
+
+    public Airplane(String model, int execCapacity, int ecoCapacity) {
+        this.model = model;
+        capacity = new HashMap<>();
+        booked = new HashMap<>();
+        capacity.put(SeatClass.BUSINESS, execCapacity);
+        capacity.put(SeatClass.ECONOMY, ecoCapacity);
+        booked.put(SeatClass.BUSINESS, 0);
+        booked.put(SeatClass.ECONOMY, 0);
+>>>>>>> af77db3 (Reser and ticket)
     }
 
     public Map<SeatClass, Integer> getCapacity() {
@@ -67,5 +91,10 @@ public class Airplane {
     public String toString() {
         return model + " (Business: " + booked.get(SeatClass.BUSINESS) + "/" + capacity.get(SeatClass.BUSINESS)
                 + " , Ecoomy: " + booked.get(SeatClass.ECONOMY) + "/" + capacity.get(SeatClass.ECONOMY) + ")";
+<<<<<<< HEAD
     }   
 }
+=======
+    }
+}
+>>>>>>> af77db3 (Reser and ticket)
